@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arcade Zone: descubra jogos, explore gêneros e encontre sua próxima aventura.">
+  <title>Arcade Zone | Portal de Jogos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-line">
+    <span class="live-dot"></span>
+    <span>SEU PRÓXIMO JOGO FAVORITO ESTÁ AQUI</span>
+    <span class="top-right">ARCADE ZONE <b>®</b></span>
+  </div>
+
+  <header class="header" id="topo">
+    <a class="brand" href="#inicio" aria-label="Arcade Zone - início">
+      <span class="brand-icon">A<span>Z</span></span>
+      <span class="brand-name">ARCADE<span>ZONE</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="navigation" id="navigation">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#catalogo">Jogos</a>
+      <a href="#generos">Gêneros</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <a class="header-button" href="#catalogo">EXPLORAR <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-pattern"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> PORTAL DE JOGOS</div>
+        <h1>ENTRE NO<br><em>JOGO.</em></h1>
+        <p>Do indie ao épico: descubra novos mundos, conheça grandes títulos e encontre sua próxima aventura.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#catalogo">EXPLORAR JOGOS <b>→</b></a>
+          <a class="button button-outline" href="#generos">VER GÊNEROS</a>
+        </div>
+        <div class="hero-numbers">
+          <div><strong>08</strong><small>JOGOS NO CATÁLOGO</small></div>
+          <i></i>
+          <div><strong>04</strong><small>GÊNEROS</small></div>
+          <i></i>
+          <div><strong>∞</strong><small>POSSIBILIDADES</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="glow-ball"></div>
+        <div class="controller">
+          <div class="dpad"><i></i><i></i><i></i><i></i></div>
+          <div class="controller-logo">AZ</div>
+          <div class="action-buttons"><i>×</i><i>●</i><i>■</i><i>▲</i></div>
+        </div>
+        <span class="visual-label label-one">PLAYER 01</span>
+        <span class="visual-label label-two">PRESS START TO EXPLORE</span>
+        <span class="spark spark-one">✳</span>
+        <span class="spark spark-two">+</span>
+      </div>
+      <a class="scroll-down" href="#catalogo">↓ <span>ROLE PARA EXPLORAR</span></a>
+    </section>
+
+    <div class="ticker" aria-label="Jogue, descubra, explore e repita">
+      <span>JOGUE</span><b>✳</b><span>DESCUBRA</span><b>✳</b><span>EXPLORE</span><b>✳</b><span>REPITA</span><b>✳</b><span>JOGUE</span>
+    </div>
+
+    <section class="catalog section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> SELEÇÃO ARCADE ZONE</div>
+          <h2>ESCOLHA SUA <em>AVENTURA.</em></h2>
+        </div>
+        <p>Uma seleção especial para<br>todos os estilos de jogadores.</p>
+      </div>
+
+      <div class="catalog-controls">
+        <div class="filters" id="filters" aria-label="Filtrar jogos por gênero">
+          <button class="filter active" data-filter="Todos">Todos <small>08</small></button>
+          <button class="filter" data-filter="Aventura">Aventura</button>
+          <button class="filter" data-filter="Ação">Ação</button>
+          <button class="filter" data-filter="RPG">RPG</button>
+          <button class="filter" data-filter="Indie">Indie</button>
+        </div>
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar jogo..." autocomplete="off">
+          <kbd>⌕</kbd>
+        </label>
+      </div>
+
+      <div class="games-grid" id="gamesGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span>:(</span>
+        <h3>NENHUM JOGO ENCONTRADO</h3>
+        <p>Tente outro nome ou escolha uma categoria diferente.</p>
+        <button class="clear-button" id="clearFilters">LIMPAR FILTROS ↗</button>
+      </div>
+    </section>
+
+    <section class="genres section" id="generos">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> ENCONTRE SEU ESTILO</div>
+          <h2>QUAL É A SUA <em>VIBE?</em></h2>
+        </div>
+        <p>Escolha um caminho.<br>O próximo mundo espera por você.</p>
+      </div>
+      <div class="genre-grid">
+        <button class="genre-card adventure" data-genre="Aventura">
+          <small>01 / EXPLORAR</small><span class="genre-icon">◈</span>
+          <strong>AVENTURA</strong><i>DESCOBRIR JOGOS ↗</i>
+        </button>
+        <button class="genre-card action" data-genre="Ação">
+          <small>02 / REAÇÃO</small><span class="genre-icon">⚡</span>
+          <strong>AÇÃO</strong><i>DESCOBRIR JOGOS ↗</i>
+        </button>
+        <button class="genre-card rpg" data-genre="RPG">
+          <small>03 / IMERSÃO</small><span class="genre-icon">✧</span>
+          <strong>RPG</strong><i>DESCOBRIR JOGOS ↗</i>
+        </button>
+        <button class="genre-card indie" data-genre="Indie">
+          <small>04 / CRIATIVIDADE</small><span class="genre-icon">✳</span>
+          <strong>INDIE</strong><i>DESCOBRIR JOGOS ↗</i>
+        </button>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="about-mark">AZ<span>+</span></div>
+      <div class="about-copy">
+        <div class="eyebrow"><span></span> SOBRE O PROJETO</div>
+        <h2>UM UNIVERSO<br>DE <em>POSSIBILIDADES.</em></h2>
+        <p>O Arcade Zone é um portal criado para quem gosta de videogames. Aqui você pode conhecer títulos, pesquisar por nome, filtrar por gênero e consultar informações de cada jogo em um só lugar.</p>
+      </div>
+      <a class="button button-primary" href="#catalogo">VOLTAR AO CATÁLOGO ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#topo">
+      <span class="brand-icon">A<span>Z</span></span>
+      <span class="brand-name">ARCADE<span>ZONE</span></span>
+    </a>
+    <p>© 2026 ARCADE ZONE. PROJETO ACADÊMICO.</p>
+    <a href="#topo">VOLTAR AO TOPO ↑</a>
+  </footer>
+
+  <div class="modal" id="gameModal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Fechar janela">×</button>
+      <div class="modal-art" id="modalArt"></div>
+      <div class="modal-body">
+        <span class="modal-category" id="modalCategory"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-info" id="modalInfo"></div>
+        <button class="button button-primary" id="modalDone">FECHAR DETALHES ↗</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
